@@ -445,6 +445,11 @@ void *
 wlc_bsscfg_find_by_wlcif(void *wlc, int wlcif)
 RETURN_DUMMY
 
+AT(CHIP_VER_BCM4358, FW_VER_7_112_200_17, 0x1B25AA)
+int
+wlc_bsscfg_malloc(void *wlc)
+RETURN_DUMMY
+
 AT(CHIP_VER_BCM4358, FW_VER_7_112_200_17, 0x046E88)
 int
 wlc_bsscfg_tdls_init(void *wlc, void *bsscfg_t, uint8 initiator)
