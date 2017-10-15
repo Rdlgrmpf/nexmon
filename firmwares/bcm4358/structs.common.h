@@ -1753,6 +1753,8 @@ struct hndrte_timer
     bool    _freedone;
 } __attribute__((packed));
 
+typedef struct hndrte_timer hndrte_timer_t;
+
 /*== maccontrol register ==*/
 #define MCTL_GMODE      (1U << 31)
 #define MCTL_DISCARD_PMQ    (1 << 30)

@@ -62,6 +62,11 @@ int
 bus_binddev_rom(void *sdiodev, void *d11dev)
 RETURN_DUMMY
 
+AT(CHIP_VER_BCM4358, FW_VER_7_112_200_17, 0x18C808)
+int
+calloc(int length)
+RETURN_DUMMY
+
 AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x16284)
 AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x7E00)
 int
@@ -159,6 +164,31 @@ AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x8240)
 AT(CHIP_VER_BCM4335b0, FW_VER_ALL, 0x18060)
 void *
 hndrte_init_timer(void *context, void *data, void *mainfn, void *auxfn)
+RETURN_DUMMY
+
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x81AC)
+void *
+hndrte_rte_timer(void *t)
+RETURN_DUMMY
+
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x8200)
+int
+hndrte_run_timeouts()
+RETURN_DUMMY
+
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x884C)
+int
+hndrte_time()
+RETURN_DUMMY
+
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x8860)
+void *
+hndrte_timeout(void *timeout, uint ms, void *fun, void *arg)
+RETURN_DUMMY
+
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x8860)
+void *
+hndrte_update_timeout_list()
 RETURN_DUMMY
 
 AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x168AC)
@@ -294,6 +324,7 @@ snprintf(char *buf, unsigned int n, const char *format, ...)
 RETURN_DUMMY
 
 AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x12794)
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x37E4)
 int
 sprintf(char *buf, const char *format, ...)
 RETURN_DUMMY
@@ -1376,6 +1407,11 @@ unsigned char
 wlc_phy_txpwrctrl_ison_acphy(void *pi)
 RETURN_DUMMY
 
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x01B888)
+int
+_wlc_pspoll_timer(int result)
+RETURN_DUMMY
+
 AT(CHIP_VER_BCM4339, FW_VER_6_37_32_RC23_34_40_r581243, 0x191654)
 int
 wlc_prep_pdu(void *wlc, void *p, int *fifo)
@@ -1642,6 +1678,11 @@ RETURN_DUMMY
 AT(CHIP_VER_BCM4339, FW_VER_6_37_32_RC23_34_43_r639704, 0x1C10C2)
 uint8
 wlc_phy_set_txpwr_clamp_acphy(void *pi)
+RETURN_DUMMY
+
+AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x5550C)
+int
+sub_5550C(int a)
 RETURN_DUMMY
 
 #undef VOID_DUMMY

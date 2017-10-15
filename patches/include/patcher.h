@@ -56,6 +56,125 @@
     __attribute__((naked)) void \
     b_ ## name(void) { asm("b hook_" #name "\n"); }
 
+#define HookPatchX(name, func, inst) \
+    void b_ ## name(void); \
+    __attribute__((naked)) void \
+    hook_ ## name(void) \
+    { \
+        asm( \
+            "push {r0-r3,lr}\n" \
+            "mov r3, lr\n" \
+            "bl " #func "\n" \
+            "pop {r0-r3,lr}\n" \
+            inst "\n" \
+            "b b_" #name " + 4\n" \
+            ); \
+    } \
+    __attribute__((naked)) void \
+    b_ ## name(void) { asm("b hook_" #name "\n"); }
+
+#define HookPatchLR2(name, func, inst) \
+    void b_ ## name(void); \
+    __attribute__((naked)) void \
+    hook_ ## name(void) \
+    { \
+        asm( \
+            "push {r0-r3,lr}\n" \
+            "mov r2, lr\n" \
+            "bl " #func "\n" \
+            "pop {r0-r3,lr}\n" \
+            inst "\n" \
+            "b b_" #name " + 4\n" \
+            ); \
+    } \
+    __attribute__((naked)) void \
+    b_ ## name(void) { asm("b hook_" #name "\n"); }
+
+#define HookPatchLR3(name, func, inst) \
+    void b_ ## name(void); \
+    __attribute__((naked)) void \
+    hook_ ## name(void) \
+    { \
+        asm( \
+            "push {r0-r3,lr}\n" \
+            "mov r3, lr\n" \
+            "bl " #func "\n" \
+            "pop {r0-r3,lr}\n" \
+            inst "\n" \
+            "b b_" #name " + 4\n" \
+            ); \
+    } \
+    __attribute__((naked)) void \
+    b_ ## name(void) { asm("b hook_" #name "\n"); }
+
+#define HookPatchLR4(name, func, inst) \
+    void b_ ## name(void); \
+    __attribute__((naked)) void \
+    hook_ ## name(void) \
+    { \
+        asm( \
+            "push {r0-r4,lr}\n" \
+            "mov r4, lr\n" \
+            "bl " #func "\n" \
+            "pop {r0-r4,lr}\n" \
+            inst "\n" \
+            "b b_" #name " + 4\n" \
+            ); \
+    } \
+    __attribute__((naked)) void \
+    b_ ## name(void) { asm("b hook_" #name "\n"); }
+
+#define HookPatchLR5(name, func, inst) \
+    void b_ ## name(void); \
+    __attribute__((naked)) void \
+    hook_ ## name(void) \
+    { \
+        asm( \
+            "push {r0-r5,lr}\n" \
+            "mov r5, lr\n" \
+            "bl " #func "\n" \
+            "pop {r0-r5,lr}\n" \
+            inst "\n" \
+            "b b_" #name " + 4\n" \
+            ); \
+    } \
+    __attribute__((naked)) void \
+    b_ ## name(void) { asm("b hook_" #name "\n"); }
+
+#define HookPatchLR6(name, func, inst) \
+    void b_ ## name(void); \
+    __attribute__((naked)) void \
+    hook_ ## name(void) \
+    { \
+        asm( \
+            "push {r0-r6,lr}\n" \
+            "mov r6, lr\n" \
+            "bl " #func "\n" \
+            "pop {r0-r6,lr}\n" \
+            inst "\n" \
+            "b b_" #name " + 4\n" \
+            ); \
+    } \
+    __attribute__((naked)) void \
+    b_ ## name(void) { asm("b hook_" #name "\n"); }
+
+#define HookPatchLR7(name, func, inst) \
+    void b_ ## name(void); \
+    __attribute__((naked)) void \
+    hook_ ## name(void) \
+    { \
+        asm( \
+            "push {r0-r7,lr}\n" \
+            "mov r7, lr\n" \
+            "bl " #func "\n" \
+            "pop {r0-r7,lr}\n" \
+            inst "\n" \
+            "b b_" #name " + 4\n" \
+            ); \
+    } \
+    __attribute__((naked)) void \
+    b_ ## name(void) { asm("b hook_" #name "\n"); }
+
 #define GenericPatch4(name, val) \
     const unsigned int gp4_ ## name = (unsigned int) (val);
 
