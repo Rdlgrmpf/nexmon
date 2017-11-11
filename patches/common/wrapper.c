@@ -78,22 +78,6 @@ void *
 dma_attach(void *osh, char *name, void* sih, unsigned int dmaregstx, unsigned int dmaregsrx, unsigned int ntxd, unsigned int nrxd, unsigned int rxbufsize, int rxextheadroom, unsigned int nrxpost, unsigned int rxoffset, void *msg_level)
 RETURN_DUMMY
 
-AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x8c69c)
-AT(CHIP_VER_BCM43438, FW_VER_7_45_41_26_r640327, 0x4E44)
-AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_26_r640327, 0x4E44)
-AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_46, 0x4F30)
-void *
-dma_rx(void *di)
-RETURN_DUMMY
-
-AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x8c6cc)
-AT(CHIP_VER_BCM43438, FW_VER_7_45_41_26_r640327, 0x5070)
-AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_26_r640327, 0x5070)
-AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_46, 0x515C)
-void *
-dma_rxfill(void *di)
-RETURN_DUMMY
-
 AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x8C49C)
 AT(CHIP_VER_BCM43438, FW_VER_7_45_41_26_r640327, 0x3520)
 AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_26_r640327, 0x3520)
@@ -891,6 +875,8 @@ RETURN_DUMMY
 AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x8c69c)
 AT(CHIP_VER_BCM43438, FW_VER_7_45_41_26_r640327, 0x4E44)
 AT(CHIP_VER_BCM4358, FW_VER_ALL, 0x6F54)
+AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_26_r640327, 0x4E44)
+AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_46, 0x4F30)
 void *
 dma_rx(struct hnddma_pub *dmah)
 RETURN_DUMMY
@@ -921,7 +907,10 @@ void
 dma_rxfill(struct hnddma_pub *dmah)
 VOID_DUMMY
 
+AT(CHIP_VER_BCM4339, FW_VER_ALL, 0x8c6cc)
 AT(CHIP_VER_BCM43438, FW_VER_7_45_41_26_r640327, 0x5070)
+AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_26_r640327, 0x5070)
+AT(CHIP_VER_BCM43430a1, FW_VER_7_45_41_46, 0x515C)
 int
 dma_rxfill_bcm43438(struct hnddma_pub *dmah)
 RETURN_DUMMY
