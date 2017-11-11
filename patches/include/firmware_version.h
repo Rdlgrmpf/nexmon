@@ -40,14 +40,19 @@
 #define CHIP_VER_BCM4330                    2
 #define CHIP_VER_BCM4358                    3
 #define CHIP_VER_BCM43438                   4
+#define CHIP_VER_BCM43430a1                 4
 #define CHIP_VER_BCM4356                    5
 #define CHIP_VER_BCM4335b0                  6
+#define CHIP_VER_BCM43596a0                 7
+#define CHIP_VER_BCM43451b1                 8
+#define CHIP_VER_BCM43455                   9
 
 #define FW_VER_ALL                          0
 
 // for CHIP_VER_BCM4339
 #define FW_VER_6_37_32_RC23_34_40_r581243   10
 #define FW_VER_6_37_32_RC23_34_43_r639704   11
+#define FW_VER_6_37_32_34_1_mfg             12
 
 // for CHIP_VER_BCM4330
 #define FW_VER_5_90_195_114                 20
@@ -56,9 +61,11 @@
 // for CHIP_VER_BCM4358
 #define FW_VER_7_112_200_17                 30
 #define FW_VER_7_112_201_3                  31
+#define FW_VER_7_112_300_14                 32
 
-// for CHIP_VER_BCM43438
+// for CHIP_VER_BCM43438 (wrongly labled) BCM43430a1
 #define FW_VER_7_45_41_26_r640327           40
+#define FW_VER_7_45_41_46                   41
 
 // for CHIP_VER_BCM4356
 #define FW_VER_7_35_101_5_sta               50
@@ -66,5 +73,14 @@
 
 // for CHIP_VER_BCM4335b0
 #define FW_VER_6_30_171_1_sta               60
+
+// for CHIP_VER_BCM43596a0
+#define FW_VER_9_75_155_45_sta_c0           70
+
+// for CHIP_VER_BCM43451b1
+#define FW_VER_7_63_43_0                    80
+
+// for CHIP_VER_BCM43455
+#define FW_VER_7_45_77_0					90
 
 #endif /*FIRMWARE_VERSION_H*/
